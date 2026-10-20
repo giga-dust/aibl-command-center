@@ -1,0 +1,4 @@
+{
+  "version": 1,
+  "description": "Snapshot of a Command Center daily brief: prioritize, personalize, position, waiting. Reads ./brief.json; no server functions."
+}

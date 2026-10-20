@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-10-20T07:30:00+02:00",
+  "owner": "Sample",
+  "headline": "4 meetings, 3 decisions waiting. Northwind phase 2 plan is a day late.",
+  "prioritize": [
+    {
+      "title": "Send Northwind the revised phase 2 rollout plan",
+      "when": "Before 11:00 check-in",
+      "why": "Lena asked for it before Tuesday; draft exists; two site managers inactive for 14 days",
+      "source": "open-actions.md, recent-messages.md"
+    },
+    {
+      "title": "Review Kestrel RFP questions, data residency first",
+      "when": "Before 16:00 intro",
+      "why": "4 of 12 questions are about data residency; first contact",
+      "source": "account-notes.md"
+    },
+    {
+      "title": "Pull Bluefin usage by department",
+      "when": "Before Friday",
+      "why": "CFO asked for time-saved evidence; renewal in 31 days",
+      "source": "account-notes.md, recent-messages.md"
+    }
+  ],
+  "personalize": [
+    {
+      "who": "Lena Hartmann, Head of Ops",
+      "account": "Northwind Logistics",
+      "whatMatters": "A clear phase 2 timeline she can hand to site managers; the login gap suggests adoption, not timing, is the real question",
+      "source": "account-notes.md"
+    },
+    {
+      "who": "Marta Silva, COO",
+      "account": "Kestrel Robotics",
+      "whatMatters": "How approvals would work for supplier follow-ups; she framed the problem as ownership, not volume",
+      "source": "recent-messages.md"
+    }
+  ],
+  "position": [
+    {
+      "account": "Northwind Logistics",
+      "recommendation": "Send the plan with a two-line note on the inactive sites and propose a 15-minute manager session",
+      "draft": "Hi Lena, here is the revised phase 2 plan. Two sites have gone quiet over the last two weeks; a short session with their managers this week would keep the timeline honest. Happy to run it.",
+      "evidence": "Lena's request (3 days ago), 14-day inactivity signal"
+    },
+    {
+      "account": "Bluefin Health",
+      "recommendation": "Lead the renewal with time-saved evidence by department, not seat counts",
+      "draft": "Talking points: 141 of 180 seats active; department export in progress; propose clinician time study with Dr. Yusuf before the CFO conversation.",
+      "evidence": "Mark Dillon's forwarded note (5 days ago)"
+    }
+  ],
+  "waiting": [
+    {
+      "item": "Security questionnaire",
+      "owner": "Tom Brecht (Northwind IT)",
+      "since": "5 days"
+    },
+    {
+      "item": "Pipeline numbers for the 09:30 sync",
+      "owner": "Priya Nair",
+      "since": "this morning"
+    }
+  ],
+  "gaps": [
+    "No CRM connected: seat usage figures come from notes, not live data"
+  ]
+}
