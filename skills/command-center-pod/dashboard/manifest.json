@@ -1,0 +1,4 @@
+{
+  "version": 1,
+  "description": "Pod banner for a Command Center Pod: today's decisions, who you are waiting on, drafts ready, connected sources. Renders ./data.json written by the daily-brief routine. No server functions."
+}

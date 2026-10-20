@@ -1,6 +1,6 @@
 ---
 name: daily-brief
-description: Use when presenting a morning brief or a Command Center summary. Fixes the layout - decide now, prepared for you, waiting on others, later - so the reader finds the decisions in under two minutes. Also emits an optional brief.json for the snapshot Frame when asked.
+description: Use when presenting a morning brief or a Command Center summary. Fixes the layout - decide now, prepared for you, waiting on others, later - so the reader finds the decisions in under two minutes. Also rewrites the Pod's dashboard data (CommandCenterDashboard/data.json) when the Pod has one.
 ---
 
 # Daily brief format
@@ -25,21 +25,23 @@ Use exactly these sections, in this order. Omit a section only when it is empty,
 - Lead with the decision, then the evidence. Never the other way round.
 - The whole brief fits on one screen. Move detail into "Prepared for you".
 
-## Optional: brief.json for the snapshot Frame
+## Dashboard data
 
-When the user asks for a snapshot or dashboard, also produce a `brief.json` file with this shape and save it next to the `CommandCenterSnapshot` Frame, then publish the Frame:
+When the Pod has a `CommandCenterDashboard/` folder, rewrite `CommandCenterDashboard/data.json` from the brief and republish the dashboard (`dsbx frame publish /files/pod-<podId>/CommandCenterDashboard/manifest.json`). Keep the shape; keep arrays to five items or fewer; copy names as they appear in the source.
 
 ```json
 {
-  "generatedAt": "2026-10-19T07:30:00+02:00",
-  "owner": "First name",
-  "headline": "One line",
-  "prioritize": [{"title": "", "when": "", "why": "", "source": ""}],
-  "personalize": [{"who": "", "account": "", "whatMatters": "", "source": ""}],
-  "position": [{"account": "", "recommendation": "", "draft": "", "evidence": ""}],
-  "waiting": [{"item": "", "owner": "", "since": ""}],
-  "gaps": [""]
+  "generatedAt": "2026-10-20T07:30:00+02:00",
+  "owner": "Sam",
+  "label": "",
+  "decide": [{ "text": "Nordwind renewal: accept the 8% discount or hold", "stake": "€48k", "by": "10:00" }],
+  "waitingOn": [{ "who": "Priya, Nordwind (legal redlines)", "days": 6 }],
+  "drafts": 2,
+  "sources": [
+    { "name": "HubSpot", "status": "connected" },
+    { "name": "Gmail", "status": "needs authentication" }
+  ]
 }
 ```
 
-Keep arrays short (five items or fewer). Empty arrays are fine. The Frame shows the data as written; it does not call any tool.
+`label` is "sample data" when the brief was built on the kit's sample files, otherwise empty. `sources[].name` is enough for the common tools (the dashboard knows their marks); add `"domain"` for anything else.

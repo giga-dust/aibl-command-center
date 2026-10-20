@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-10-20T07:30:00+02:00",
+  "owner": "Sam",
+  "label": "sample data",
+  "decide": [
+    { "text": "Nordwind renewal: accept the 8% discount or hold at list price", "stake": "€48k", "by": "10:00" },
+    { "text": "Helio: reply to Jonas on the security questionnaire deadline", "stake": "€120k", "by": "today" },
+    { "text": "Brightline: who joins the exec review on Thursday", "by": "today" }
+  ],
+  "waitingOn": [
+    { "who": "Priya, Nordwind (legal redlines)", "days": 6 },
+    { "who": "Mara, Lumen (pilot scope)", "days": 4 },
+    { "who": "Finance (Helio discount approval)", "days": 2 }
+  ],
+  "drafts": 2,
+  "sources": [
+    { "name": "HubSpot", "domain": "hubspot.com", "status": "connected" },
+    { "name": "Google Calendar", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/960px-Google_Calendar_icon_%282020%29.svg.png", "status": "connected" },
+    { "name": "Gmail", "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/960px-Gmail_icon_%282020%29.svg.png", "status": "needs authentication" },
+    { "name": "Slack", "domain": "slack.com", "status": "connected" }
+  ],
+  "note": "Sample data from the aibl-command-center kit. The daily-brief routine rewrites this file."
+}
